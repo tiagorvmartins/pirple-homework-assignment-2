@@ -5,7 +5,7 @@ This is my public repo for the Pirple Homework Assignment #2
 
 ### /users
 
-- [POST]  http://localhost:3000/users
+#### [POST]  http://localhost:3000/users
 
 Example payload request:
 
@@ -18,7 +18,7 @@ Example payload request:
 }
 ```
 
-- [GET]  http://localhost:3000/users?id=a688f4dbc11ead7d9902ef10347e2eebec1c9eae38521cfb3e6bc19aa0c1df98
+#### [GET]  http://localhost:3000/users?id=a688f4dbc11ead7d9902ef10347e2eebec1c9eae38521cfb3e6bc19aa0c1df98
 
 Requires authentication in header, the token key like this:
 
@@ -26,7 +26,7 @@ token : 3vwqxudaw6fmf9sowjdu
 
 The id is the hashed emailAddress, such that the system allows unique users with their unique emailAddress.
 
-- [PUT]  http://localhost:3000/users
+#### [PUT]  http://localhost:3000/users
 
 Requires authentication in header, the token key like this:
 
@@ -41,7 +41,7 @@ token : 3vwqxudaw6fmf9sowjdu
 }
 ```
 
-- [DELETE] http://localhost:3000/users?id=a688f4dbc11ead7d9902ef10347e2eebec1c9eae38521cfb3e6bc19aa0c1df98
+#### [DELETE] http://localhost:3000/users?id=a688f4dbc11ead7d9902ef10347e2eebec1c9eae38521cfb3e6bc19aa0c1df98
 
 Requires authentication in header, the token key like this:
 
@@ -53,7 +53,7 @@ ________________________________________________________________________________
 
 ### /login
 
-- [POST]  http://localhost:3000/login
+#### [POST]  http://localhost:3000/login
 
 ```json
 {
@@ -69,7 +69,7 @@ ________________________________________________________________________________
 
 ### /logout
 
-- [POST]  http://localhost:3000/logout
+#### [POST]  http://localhost:3000/logout
 
 Requires authentication in header, the token key like this:
 
