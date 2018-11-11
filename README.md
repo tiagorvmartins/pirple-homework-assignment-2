@@ -131,11 +131,11 @@ Requires authentication and userid in header, like this:
 token : 3vwqxudaw6fmf9sowjdu
 userid: a688f4dbc11ead7d9902ef10347e2eebec1c9eae38521cfb3e6bc19aa0c1df98
 
-Body (json):
-
+```json
 {
 	"item":"cheese_bacon"
 }
+```
 
 Note: item should be a valid pizza name from the list of available pizzas. It allows multiple to add multiple pizzas with same name to the cart. After adding the shoppingcart array of the user object is updated.
 
@@ -147,11 +147,11 @@ Requires authentication and userid in header, like this:
 token : 3vwqxudaw6fmf9sowjdu
 userid: a688f4dbc11ead7d9902ef10347e2eebec1c9eae38521cfb3e6bc19aa0c1df98
 
-Body (json):
-
+```json
 {
 	"item":"cheese_bacon"
 }
+```
 
 Note: it removes the first single pizza on the shoppingcart array of the user with the same pizza name requested. It doesn't remove nor update if pizza name wasn't found or shopping cart is empty.
 
@@ -173,7 +173,7 @@ userid: a688f4dbc11ead7d9902ef10347e2eebec1c9eae38521cfb3e6bc19aa0c1df98
 Note: Using the id on query string, lookup and fetch the order object from the orders data folder.
 
 Example:
-
+```json
 {
     "id": "wr5pwe84uqbayywbytqe",
     "userId": "a688f4dbc11ead7d9902ef10347e2eebec1c9eae38521cfb3e6bc19aa0c1df98",
@@ -185,7 +185,7 @@ Example:
         "cheese_bacon"
     ]
 }
-
+```
 
 
 #### [POST] http://localhost:3000/order
@@ -200,7 +200,7 @@ Note: it creates a new order with all the items on user's shopping cart and save
 After placing the order the shopping cart gets empty and a new order id goes to the orders array of user object as the following example shows.
 
 Example:
-
+```json
 {
     "id": "a688f4dbc11ead7d9902ef10347e2eebec1c9eae38521cfb3e6bc19aa0c1df98",
     "name": "Name",
@@ -211,7 +211,7 @@ Example:
     ],
     "shoppingcart": []
 }
-
+```
 
 ______________________________________________________________________________________________________________
 
@@ -227,15 +227,17 @@ token : 3vwqxudaw6fmf9sowjdu
 userid: a688f4dbc11ead7d9902ef10347e2eebec1c9eae38521cfb3e6bc19aa0c1df98
 
 Also requires the following data on body (json), the id of the order to checkout and the stripe token to apply the charge (in this case it's a test token)
-
+```json
 {
 	"orderId":"wr5pwe84uqbayywbytqe",
 	"stripeToken":"tok_mastercard_debit"
 }
+```
 
 After charging an email is sent to the user, and the variables regarding 'payment' and 'email sent' of the order are updated depending on the success of both operations.
 Example of a order in which both payment and email were sent with success:
 
+```json
 {
     "id": "wr5pwe84uqbayywbytqe",
     "userId": "a688f4dbc11ead7d9902ef10347e2eebec1c9eae38521cfb3e6bc19aa0c1df98",
@@ -247,8 +249,7 @@ Example of a order in which both payment and email were sent with success:
         "cheese_bacon"
     ]
 }
-
-
+```
 
 
 
